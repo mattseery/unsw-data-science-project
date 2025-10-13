@@ -1,0 +1,21 @@
+---
+title: "ASSESSMENT 3 - Peer Marking"
+author: "Group D"
+date: "14/06/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Rather than trying to divide every team member’s contribution to the minutest detail it was decided that each member of the team (Baheerathan Gnanasundram, Matthew Seery, Mohammad Ahsan Ullah, Rahul Lobo) should receive an equal weight of 25% for their contributions. As tasks were assigned largely based on each member’s skillset, it was inevitable that some members would have fewer tasks that take longer to complete while others would end up having more tasks that on average take less time to complete. It was felt this was the best way to address any imbalance of workloads. The team is satisfied that all members have made significant contributions to the project. In summary the weightings for each team member are:
+
+|           Name           |   Weighting   |
+|--------------------------|:-------------:|
+| Baheerathan Gnanasundram |    0.25       |
+|      Matthew Seery       |    0.25       |
+|  Mohammad Ahsan Ullah    |    0.25       |
+|       Rahul Lobo         |    0.25       |
+|          TOTAL           |    1.00       |

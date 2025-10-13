@@ -1,0 +1,92 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+
+Forecasting electricity demand is now an important requirement as there are now more
+interested parties associated with the generation and distribution of this service.
+Traditionally electricity demand was just the concern of governments. However, this has
+now been extended to market bodies and owners and operators of the underlying
+infrastructure required for this service. This study aims to demonstrate how neural
+networks can be used to accurately forecast for short-term demand. The focus
+will be on attributes such as temperature, month of the year, day of the week and time of
+the day. It is envisaged that the results of this study can provide useful insights for
+governments and market bodies to assist in the rules, policies and pricing that are invoked
+on the energy sector. Additionally, the businesses operating in this sector can use this
+information to guide their decision-making regarding electricity generation and distribution.
+
+
+&nbsp;
+\newpage
+
+
+# Contents
+
+P3. Introduction and Motivation   
+
+P3. Brief Literature Review
+
+P4. Methods, Software and Data Description
+
+P4. Activities and Schedules
+
+P5. References
+
+
+\newpage
+
+## Introduction and Motivation
+
+Towards the end of the 20th century, countries throughout the world began moving away from regulated government-controlled energy supply to a deregulated sector influenced by market forces [1]. This means that forecasting for electricity demands is essential information required beyond previously regulated governmental structures. It is now required by the market bodies working in the sector and private industries who invest in the generation and distribution of electricity. In turn, this aids in better rules, policies, and pricing in the energy sector. However, for this study, the focus will primarily be on short-term forecasting as this can greatly aid vested parties concerned in maximising profits and cutting costs.
+
+Temperature plays a significant role in electricity demand. This is because heating is utilised more by customers in the cooler months while cooling is required for the hottest months of the year. For that reason, temperature is an essential attribute that will be investigated in this study. However, temperature does not account for other factors such as humidity or varying electricity usage patterns associated with specific days of the weeks. For example, a temperature of 25 degrees in Spring may not lead to as much usage of air conditioning as a humid day in Summer with the same temperature. Additionally, the rate of usage of electricity will inevitably vary between weekdays, weekends, and public holidays due to the varying ratios of usage between business and residential customers. Therefore, the month of the year, day of the week and time of day will also be examined in this study.
+
+
+## Brief Literature Review
+
+There have been various studies undertaken where more traditional statistical methods such as multiple linear regression have been utilised to predict demand [2,3]. However, in more recent times there has been greater focus on the use of neural networks to help solve the problem of forecasting demand [4]. The advantage of neural networks is they are very suitable for determining non-linear relationships [5] and have been widely used for short-term demand forecasting [6]. They are also very flexible and easy to configure when dealing with time-series data [4]. For neural networks, monthly values have been a popular unit of measure and this is particularly true when short-term forecasting of demand has been employed [4,5,6]. However, this proposed solution differs because the focus will be on intervals shorter than even a day as this is of greater interest to the client. Nevertheless, the month of the year will still be considered as an input factor for the model for its potential to distinguish factors such as humidity that are not fully explained by temperature alone. Another distinguishing factor for this study will be the emphasis on the day of the week where each record will be categorised as either a weekday, weekend, or public holiday.
+
+\newpage
+
+## Methods, Software and Data Description
+
+For this study, three separate datasets have been made available covering a 10-year period. One relates to temperature, another to demand with a third containing forecasted demand. While forecast demand could be useful for certain types of models, it will not be used for this project. The remaining two datasets will be used for forecasting where various ratio splits for training, validation, and testing will be used. Apart from a standard multi-layer perceptron model, testing will also be performed using Recurrent Neural Network (RNN) and Long Short-Term Memory (LSTM) architectures. However, before testing can begin, additional features for the month of the year, day of year and time of day will need to be extracted from the supplied timestamps in each dataset.
+The neural network models will be created using python as this programming language has several popular and reliable libraries that can be used with neural networks. These include Pytorch, Keras, Tensorflow and Scikit-learn. The code used for modelling will be developed within the Jupyter notebook environment. Tableau will also be used for exploring and visualising the data as an aid to the modelling process. If required, R will also be utilised for statistical analysis and alternate visualisations.
+
+
+
+## Activities and Schedules
+![Scheduling of Activities Undertaken by Group D Team Members](gannt_chart)
+
+\newpage
+## References 
+
+[1] J.P.S. Catalão, S.J.P.S. Mariano, V.M.F. Mendes and L.A.F.M. Ferreira, Short-term
+      electricity prices forecasting in a competitive market: A neural network approach,
+      Electric Power Systems Research. 77 (10) (2007) 1297-1304
+      
+[2] Z. Mohamed and P. Bodger, Forecasting electricity consumption in New Zealand using
+economic and demographic variables, Energy. 30 (10) (2005) 1833-1843
+
+[3] G. Ciulla and A. D'Amico, Building energy performance forecasting: A multiple linear
+      regression approach, Applied Energy. 253 (2019) 113500
+      
+[4] D. Carmona, M.A. Jaramillo, E. Gonzalez and J.A. Alvarez, Electric energy demand
+      forecasting with neural networks, IEEE 2002 28th Annual Conference of the Industrial
+      Electronics Society. 3 (2002) 1860-1865
+      
+[5] E. González-Romera, M.A. Jaramillo-Morán and D. Carmona-Fernández, Monthly electric
+      energy demand forecasting with neural networks and Fourier series, Energy Conversion
+      and Management. 49 (11) (2008) 3135-3142
+      
+[6] R.E. Abdel-Aal, Univariate modeling and forecasting of monthly energy demand time
+      series using abductive and neural networks, Computers & Industrial Engineering. 54 (4)
+      (2008) 903-917
